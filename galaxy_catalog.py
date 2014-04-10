@@ -3,6 +3,16 @@ class Halo:
     def __init__(self): 
         pass
 
+    def xyz_to_RADECZ(self): 
+        '''
+        Convert x, y, x positions of halos into 
+        RA, Dec, and Redshift values
+        '''
+
+        self.ra = 
+        self.dec = 
+        self.z = 
+
 class Galaxies: 
     def __init__(self): 
         pass
@@ -19,12 +29,13 @@ def readHalofile(filename='halo_chunk.dat'):
     return halo 
 
 def assignGalaxies(halo, galaxy): 
-    
+    halo_x = getattr(halo, 'x')  
+    halo_y = getattr(halo, 'y')  
+    halo_z = getattr(halo, 'z')  
 
 if __name__=="__main__": 
     maxhalo = readHalofile('halo_chunk_max.dat')
-    print maxhalo.__dict__.keys()
-    print maxhalo.Mvir
+    maxhalo.xyz_to_RADECZ()
 
     maxhalo_galaxies = Halo()
     
